@@ -839,22 +839,24 @@ ul {
 /* Team */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 50px 40px;
     justify-items: center;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .team-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
+        max-width: 500px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .team-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        max-width: 300px;
     }
 }
 
