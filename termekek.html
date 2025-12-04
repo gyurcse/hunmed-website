@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hunmed termékkínálat - diagnosztikai eszközök, laboreszközök, kórházi felszerelések, rendelői eszközök.">
+    <title>Termékeink - Hunmed</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGÁCIÓ -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                <span class="logo-text">Hunmed</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Menü megnyitása">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Főoldal</a></li>
+                <li><a href="rolunk.html" class="nav-link">Rólunk</a></li>
+                <li><a href="termekek.html" class="nav-link active">Termékeink</a></li>
+                <li><a href="szolgaltatasok.html" class="nav-link">Szolgáltatások</a></li>
+                <li><a href="kapcsolat.html" class="nav-link nav-cta">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero hero-products">
+        <div class="container">
+            <h1>Termékeink</h1>
+            <p>Fedezze fel prémium minőségű orvosi műszer kínálatunkat</p>
+        </div>
+    </section>
+
+    <!-- BEVEZETŐ -->
+    <section class="products-intro section">
+        <div class="container">
+            <p class="intro-text">
+                Széles termékpalettánkkal az egészségügy minden területét lefedve 
+                kínálunk megoldásokat. Minden termékünk CE tanúsítvánnyal rendelkezik 
+                és megfelel az európai minőségi szabványoknak.
+            </p>
+            
+            <!-- Kategória navigáció -->
+            <div class="product-nav">
+                <a href="#diagnosztikai" class="product-nav-item"><i class="fa-solid fa-heartbeat"></i> Diagnosztikai</a>
+                <a href="#labor" class="product-nav-item"><i class="fa-solid fa-microscope"></i> Labor</a>
+                <a href="#korhazi" class="product-nav-item"><i class="fa-solid fa-hospital"></i> Kórházi</a>
+                <a href="#rendeloi" class="product-nav-item"><i class="fa-solid fa-stethoscope"></i> Rendelői</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNOSZTIKAI ESZKÖZÖK -->
+    <section class="product-category section" id="diagnosztikai">
+        <div class="container">
+            <div class="category-header">
+                <span class="category-icon-large"><i class="fa-solid fa-heartbeat"></i></span>
+                <h2>Diagnosztikai eszközök</h2>
+                <p>Precíz mérések a pontos diagnózisért</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400&h=300&fit=crop" alt="Vérnyomásmérő">
+                        <span class="product-badge">Népszerű</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Digitális vérnyomásmérő - Pro</h3>
+                        <p>Professzionális felkaros vérnyomásmérő LCD kijelzővel, memória funkcióval és aritmiás figyelmeztetéssel.</p>
+                        <ul class="product-features">
+                            <li>✓ WHO skála szerinti kijelzés</li>
+                            <li>✓ 2x60 memória</li>
+                            <li>✓ Mandzsetta: 22-42 cm</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-7cb057fba93c?w=400&h=300&fit=crop" alt="EKG készülék">
+                    </div>
+                    <div class="product-info">
+                        <h3>12 csatornás EKG készülék</h3>
+                        <p>Hordozható EKG készülék automatikus analízissel, érintőképernyős kezeléssel és WiFi kapcsolattal.</p>
+                        <ul class="product-features">
+                            <li>✓ 12 csatornás szimultán mérés</li>
+                            <li>✓ Beépített nyomtató</li>
+                            <li>✓ PC szoftver mellékelt</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&h=300&fit=crop" alt="Pulzoximéter">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pulzoximéter - ujjra csíptethető</h3>
+                        <p>Professzionális minőségű ujjra csíptethető pulzoximéter OLED kijelzővel.</p>
+                        <ul class="product-features">
+                            <li>✓ SpO2 és pulzusmérés</li>
+                            <li>✓ Plethysmográfia görbe</li>
+                            <li>✓ 30 óra üzemidő</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop" alt="Hőmérő">
+                    </div>
+                    <div class="product-info">
+                        <h3>Infravörös fülhőmérő</h3>
+                        <p>Érintés nélküli homlok- és fülhőmérő 1 másodperces méréssel.</p>
+                        <ul class="product-features">
+                            <li>✓ ±0.2°C pontosság</li>
+                            <li>✓ Láz riasztás</li>
+                            <li>✓ 32 memória</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LABORESZKÖZÖK -->
+    <section class="product-category section section-gray" id="labor">
+        <div class="container">
+            <div class="category-header">
+                <span class="category-icon-large"><i class="fa-solid fa-microscope"></i></span>
+                <h2>Laboreszközök</h2>
+                <p>Megbízható eszközök a laboratóriumi munkához</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516571748831-5d81767b044d?w=400&h=300&fit=crop" alt="Mikroszkóp">
+                        <span class="product-badge new">Új</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Binokuláris mikroszkóp</h3>
+                        <p>Professzionális binokuláris mikroszkóp LED megvilágítással és 40x-1000x nagyítással.</p>
+                        <ul class="product-features">
+                            <li>✓ Planakromatikus objektívek</li>
+                            <li>✓ Koaxiális fokuszálás</li>
+                            <li>✓ Kamera csatlakozás</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=300&fit=crop" alt="Centrifuga">
+                    </div>
+                    <div class="product-info">
+                        <h3>Laboratóriumi centrifuga</h3>
+                        <p>Asztali centrifuga változtatható fordulatszámmal és időzítővel.</p>
+                        <ul class="product-features">
+                            <li>✓ Max. 4000 RPM</li>
+                            <li>✓ 8x15ml kapacitás</li>
+                            <li>✓ Digitális kijelző</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=400&h=300&fit=crop" alt="Vérkép analizátor">
+                    </div>
+                    <div class="product-info">
+                        <h3>Automata vérkép analizátor</h3>
+                        <p>Kompakt hematológiai analizátor 18 paraméteres vérkép meghatározással.</p>
+                        <ul class="product-features">
+                            <li>✓ 60 minta/óra</li>
+                            <li>✓ 3-részes diff</li>
+                            <li>✓ LIS csatlakozás</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KÓRHÁZI FELSZERELÉSEK -->
+    <section class="product-category section" id="korhazi">
+        <div class="container">
+            <div class="category-header">
+                <span class="category-icon-large"><i class="fa-solid fa-hospital"></i></span>
+                <h2>Kórházi felszerelések</h2>
+                <p>Tartós és megbízható eszközök az intézmények számára</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop" alt="Kórházi ágy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elektromos betegágy</h3>
+                        <p>4 motoros elektromos kórházi ágy távirányítóval és CPR funkcióval.</p>
+                        <ul class="product-features">
+                            <li>✓ Trendelenburg pozíció</li>
+                            <li>✓ 250 kg teherbírás</li>
+                            <li>✓ Könnyen tisztítható</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop" alt="Betegszállító">
+                    </div>
+                    <div class="product-info">
+                        <h3>Betegszállító kocsi</h3>
+                        <p>Ergonomikus betegszállító ágy magasságállítással.</p>
+                        <ul class="product-features">
+                            <li>✓ Röntgen áteresztő</li>
+                            <li>✓ Oldalkorlát</li>
+                            <li>✓ Fékezhető kerekek</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=400&h=300&fit=crop" alt="Infúziós állvány">
+                    </div>
+                    <div class="product-info">
+                        <h3>Infúziós állvány</h3>
+                        <p>Rozsdamentes acél infúziós állvány 5 lábbal és 4 akasztóval.</p>
+                        <ul class="product-features">
+                            <li>✓ Magasság: 135-220 cm</li>
+                            <li>✓ Görgős talp</li>
+                            <li>✓ 8 kg teherbírás</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RENDELŐI ESZKÖZÖK -->
+    <section class="product-category section section-gray" id="rendeloi">
+        <div class="container">
+            <div class="category-header">
+                <span class="category-icon-large"><i class="fa-solid fa-stethoscope"></i></span>
+                <h2>Rendelői eszközök</h2>
+                <p>Mindennapi használatra tervezett professzionális eszközök</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&h=300&fit=crop" alt="Sztetoszkóp">
+                        <span class="product-badge sale">Akció</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Prémium sztetoszkóp</h3>
+                        <p>Kardiológiai minőségű duplafejes sztetoszkóp kiváló akusztikával.</p>
+                        <ul class="product-features">
+                            <li>✓ Rozsdamentes acél</li>
+                            <li>✓ Állítható füloliva</li>
+                            <li>✓ 5 év garancia</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=400&h=300&fit=crop" alt="Diagnosztikai szett">
+                    </div>
+                    <div class="product-info">
+                        <h3>Diagnosztikai szett</h3>
+                        <p>Komplett vizsgálati készlet otoszkóppal és oftalmoszkóppal.</p>
+                        <ul class="product-features">
+                            <li>✓ LED megvilágítás</li>
+                            <li>✓ Cserefelek mellékelve</li>
+                            <li>✓ Hordtáska</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=400&h=300&fit=crop" alt="Vizsgálóasztal">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vizsgálóasztal</h3>
+                        <p>Elektromos vizsgálóasztal papírtekercs tartóval.</p>
+                        <ul class="product-features">
+                            <li>✓ 3 szekciós</li>
+                            <li>✓ Magasságállítás</li>
+                            <li>✓ Műbőr kárpit</li>
+                        </ul>
+                        <a href="kapcsolat.html" class="btn btn-primary btn-sm">Árajánlat kérése</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Nem találja amit keres?</h2>
+            <p>Kínálatunk folyamatosan bővül. Ha egy specifikus terméket keres, vegye fel velünk a kapcsolatot!</p>
+            <div class="cta-buttons">
+                <a href="kapcsolat.html" class="btn btn-white">Kapcsolatfelvétel</a>
+                <a href="tel:+3612345678" class="btn btn-outline-white">
+                    <span class="btn-icon"><i class="fa-solid fa-phone"></i></span>
+                    +36 1 234 5678
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LÁBLÉC -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                        <span class="logo-text">Hunmed</span>
+                    </a>
+                    <p>Megbízható partner az egészségügyben. Prémium minőségű orvosi műszerek forgalmazása.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Gyorslinkek</h4>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="rolunk.html">Rólunk</a></li>
+                        <li><a href="termekek.html">Termékeink</a></li>
+                        <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Elérhetőség</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 1052 Budapest, Váci utca 12.</li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+3612345678">+36 1 234 5678</a></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@hunmed.hu">info@hunmed.hu</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Nyitvatartás</h4>
+                    <ul>
+                        <li>Hétfő - Péntek: 8:00 - 17:00</li>
+                        <li>Szombat - Vasárnap: Zárva</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hunmed Kft. Minden jog fenntartva.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

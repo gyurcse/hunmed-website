@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lépjen kapcsolatba a Hunmed csapatával - elérhetőségek, kapcsolati űrlap.">
+    <title>Kapcsolat - Hunmed</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVIGÁCIÓ -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                <span class="logo-text">Hunmed</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Menü megnyitása">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Főoldal</a></li>
+                <li><a href="rolunk.html" class="nav-link">Rólunk</a></li>
+                <li><a href="termekek.html" class="nav-link">Termékeink</a></li>
+                <li><a href="szolgaltatasok.html" class="nav-link">Szolgáltatások</a></li>
+                <li><a href="kapcsolat.html" class="nav-link nav-cta active">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero hero-contact">
+        <div class="container">
+            <h1>Kapcsolat</h1>
+            <p>Vegye fel velünk a kapcsolatot – örömmel segítünk!</p>
+        </div>
+    </section>
+
+    <!-- KAPCSOLATI INFORMÁCIÓK -->
+    <section class="contact-info section">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Címünk</h3>
+                    <p><strong>Hunmed Kft.</strong></p>
+                    <p>1052 Budapest</p>
+                    <p>Váci utca 12. 3. emelet</p>
+                    <a href="https://maps.google.com/?q=Budapest+Váci+utca+12" target="_blank" class="contact-link">Útvonaltervezés →</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Telefonszám</h3>
+                    <p><strong>Központi szám:</strong></p>
+                    <p><a href="tel:+3612345678">+36 1 234 5678</a></p>
+                    <p><strong>Szerviz hotline:</strong></p>
+                    <p><a href="tel:+3612345679">+36 1 234 5679</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>E-mail</h3>
+                    <p><strong>Általános:</strong></p>
+                    <p><a href="mailto:info@hunmed.hu">info@hunmed.hu</a></p>
+                    <p><strong>Értékesítés:</strong></p>
+                    <p><a href="mailto:sales@hunmed.hu">sales@hunmed.hu</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>Nyitvatartás</h3>
+                    <p><strong>Hétfő - Péntek:</strong></p>
+                    <p>8:00 - 17:00</p>
+                    <p><strong>Szombat - Vasárnap:</strong></p>
+                    <p>Zárva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KAPCSOLATI ŰRLAP -->
+    <section class="contact-form-section section section-gray">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="form-container">
+                    <h2>Írjon nekünk!</h2>
+                    <p>Töltse ki az alábbi űrlapot és kollégáink 24 órán belül felveszik Önnel a kapcsolatot.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Név *</label>
+                                <input type="text" id="name" name="name" required placeholder="Az Ön neve">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Cégnév</label>
+                                <input type="text" id="company" name="company" placeholder="Cég neve (opcionális)">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail cím *</label>
+                                <input type="email" id="email" name="email" required placeholder="pelda@email.hu">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefonszám</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+36 30 123 4567">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Tárgy *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Válasszon témát...</option>
+                                <option value="arajanlat">Árajánlat kérés</option>
+                                <option value="termek">Termék információ</option>
+                                <option value="szerviz">Szerviz / Javítás</option>
+                                <option value="reklamacio">Reklamáció</option>
+                                <option value="egyeb">Egyéb</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Üzenet *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Írja le kérdését vagy kérését..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span>Elolvastam és elfogadom az Adatvédelmi tájékoztatót *</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Üzenet küldése</button>
+                    </form>
+                </div>
+                
+                <div class="form-sidebar">
+                <div class="sidebar-card">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Gyors kapcsolat</h3>
+                    <p>Sürgős kérdés esetén hívjon minket közvetlenül:</p>
+                    <a href="tel:+3612345678" class="phone-link"><i class="fa-solid fa-phone"></i> +36 1 234 5678</a>
+                </div>
+                
+                <div class="sidebar-card">
+                    <h3><i class="fa-solid fa-file-invoice"></i> Árajánlat kérés</h3>
+                    <p>Konkrét termékre szeretne árajánlatot?</p>
+                    <ul>
+                        <li>Adja meg a termék nevét/típusát</li>
+                        <li>Jelezze a szükséges mennyiséget</li>
+                        <li>24 órán belül válaszolunk</li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-card">
+                    <h3><i class="fa-solid fa-wrench"></i> Szerviz bejelentés</h3>
+                    <p>Hibás készülék? Kérjük adja meg:</p>
+                    <ul>
+                        <li>Készülék típusa és sorozatszáma</li>
+                        <li>Hiba rövid leírása</li>
+                        <li>Vásárlás időpontja</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉRKÉP -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Így talál meg minket</h2>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6777!2d19.0512!3d47.4925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc402a04eee5%3A0xb5782f7c1a964b07!2sV%C3%A1ci%20u.%2C%20Budapest!5e0!3m2!1shu!2shu!4v1699999999999"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- CÉGINFORMÁCIÓK -->
+    <section class="company-info section">
+        <div class="container">
+            <h2 class="section-title">Céginformációk</h2>
+            
+            <div class="company-details">
+                <div class="detail-row">
+                    <span class="detail-label">Cégnév:</span>
+                    <span class="detail-value">Hunmed Orvosi Műszer Kereskedelmi Kft.</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Székhely:</span>
+                    <span class="detail-value">1052 Budapest, Váci utca 12.</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Cégjegyzékszám:</span>
+                    <span class="detail-value">01-09-123456</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Adószám:</span>
+                    <span class="detail-value">12345678-2-41</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Bankszámlaszám:</span>
+                    <span class="detail-value">OTP Bank: 11111111-22222222-33333333</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LÁBLÉC -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                        <span class="logo-text">Hunmed</span>
+                    </a>
+                    <p>Megbízható partner az egészségügyben.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Gyorslinkek</h4>
+                    <ul>
+                        <li><a href="index.html">Főoldal</a></li>
+                        <li><a href="rolunk.html">Rólunk</a></li>
+                        <li><a href="termekek.html">Termékeink</a></li>
+                        <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Elérhetőség</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 1052 Budapest, Váci utca 12.</li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+3612345678">+36 1 234 5678</a></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@hunmed.hu">info@hunmed.hu</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Nyitvatartás</h4>
+                    <ul>
+                        <li>Hétfő - Péntek: 8:00 - 17:00</li>
+                        <li>Szombat - Vasárnap: Zárva</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hunmed Kft. Minden jog fenntartva.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
