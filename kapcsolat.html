@@ -14,14 +14,9 @@
 <body>
     <header class="header">
         <nav class="nav container">
-            <a href="index.html" class="logo">
-                <span class="logo-mark">HM</span>
-                <span class="logo-text">HUN-MED</span>
-            </a>
+            <a href="index.html" class="logo">HUN-MED KFT.</a>
             <button class="nav-toggle" aria-label="Menü megnyitása">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Főoldal</a></li>
@@ -32,116 +27,89 @@
         </nav>
     </header>
 
-    <section class="page-hero">
+    <section class="page-title-section">
         <div class="container">
             <h1>Kapcsolat</h1>
-            <p>Írjon nekünk, vagy keressen minket az alábbi elérhetőségeken</p>
+            <div class="title-accent"></div>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section-gray" style="padding-top: 0;">
         <div class="container">
-            <div class="contact-details-block">
-                <dl>
-                    <div class="detail-row">
-                        <dt>Cégnév</dt>
-                        <dd>HUN-MED Kft.</dd>
+            <div class="contact-split">
+                <div>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-building"></i>
+                            <span><strong>HUN-MED Kft.</strong><br>2040 Budaörs, Virág utca 12.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:hunmed@hunmed.hu">hunmed@hunmed.hu</a>
+                        </li>
+                    </ul>
+                    <div class="company-meta">
+                        <p><strong>Adószám:</strong> 10711426-2-13</p>
                     </div>
-                    <div class="detail-row">
-                        <dt>Székhely</dt>
-                        <dd>2040 Budaörs, Virág utca 12.</dd>
-                    </div>
-                    <div class="detail-row">
-                        <dt>E-mail</dt>
-                        <dd><a href="mailto:hunmed@hunmed.hu">hunmed@hunmed.hu</a></dd>
-                    </div>
-                    <div class="detail-row">
-                        <dt>Adószám</dt>
-                        <dd>10711426-2-13</dd>
-                    </div>
-                </dl>
+                </div>
+                <div class="form-panel">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Név</label>
+                            <input type="text" id="name" name="name" required placeholder="Név">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail cím</label>
+                                <input type="email" id="email" name="email" required placeholder="E-mail cím">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefonszám</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Telefonszám">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Üzenet</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Üzenet"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Üzenet küldése</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="contact-form-section section section-gray">
+    <section class="map-section">
         <div class="container">
-            <h2 class="section-title">Kapcsolatfelvétel</h2>
-            <p class="section-subtitle">Töltse ki az űrlapot, és hamarosan felvesszük Önnel a kapcsolatot.</p>
-            <div class="form-container">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Név *</label>
-                        <input type="text" id="name" name="name" required placeholder="Az Ön neve">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required placeholder="pelda@email.hu">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefonszám</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+36 30 123 4567">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Üzenet *</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Üzenete..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Üzenet küldése</button>
-                </form>
+            <div class="map-container">
+                <iframe
+                    title="HUN-MED Kft. helyszíne"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.45!2d18.958!3d47.461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc5c8e8e8e8f%3A0x0!2sVir%C3%A1g%20u.%2012%2C%202040%20Buda%C3%B6rs!5e0!3m2!1shu!2shu!4v1"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-        </div>
-    </section>
-
-    <section class="map-section section-gray">
-        <div class="container">
-            <h2 class="section-title">Térkép</h2>
-        </div>
-        <div class="map-container">
-            <iframe
-                title="HUN-MED Kft. helyszíne"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.45!2d18.958!3d47.461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc5c8e8e8e8f%3A0x0!2sVir%C3%A1g%20u.%2012%2C%202040%20Buda%C3%B6rs!5e0!3m2!1shu!2shu!4v1"
-                width="100%"
-                height="420"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-mark">HM</span>
-                        <span>HUN-MED Kft.</span>
-                    </a>
-                    <p>Orvosi műszerek és endoszkópos megoldások magyarországi képviselete.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigáció</h4>
-                    <ul>
-                        <li><a href="index.html">Főoldal</a></li>
-                        <li><a href="kepviseleteink.html">Képviseleteink</a></li>
-                        <li><a href="munkatarsak.html">Munkatársak</a></li>
-                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Elérhetőség</h4>
-                    <ul>
-                        <li><i class="fa-solid fa-location-dot"></i> 2040 Budaörs, Virág utca 12.</li>
-                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:hunmed@hunmed.hu">hunmed@hunmed.hu</a></li>
-                    </ul>
-                </div>
+        <div class="container footer-main">
+            <div><span class="footer-logo-text">HUN-MED KFT.</span></div>
+            <div class="footer-desc">
+                <p>Orvosi műszerek és endoszkópos megoldások magyarországi képviselete. Nemzetközi gyártók hivatalos magyarországi képviselete és szakmai támogatása.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 HUN-MED Kft. Minden jog fenntartva.</p>
+            <div class="footer-contact-col">
+                <a href="mailto:hunmed@hunmed.hu"><i class="fa-solid fa-envelope"></i> hunmed@hunmed.hu</a>
+                <span><i class="fa-solid fa-location-dot"></i> 2040 Budaörs, Virág utca 12.</span>
             </div>
+        </div>
+        <div class="container footer-bar">
+            <p>&copy; 2026 HUN-MED Kft. Minden jog fenntartva.</p>
+            <a href="#" class="back-to-top" aria-label="Vissza az oldal tetejére"><i class="fa-solid fa-chevron-up"></i></a>
         </div>
     </footer>
 

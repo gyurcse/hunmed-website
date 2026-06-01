@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeaderScroll();
     initContactForms();
     initScrollAnimations();
+    initBackToTop();
 });
 
 function initMobileNav() {
@@ -118,7 +119,7 @@ function showNotification(message, type) {
 
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.expertise-card, .partner-card, .staff-card, .form-panel, .contact-details-block'
+        '.expertise-card, .partner-card, .staff-card, .form-panel'
     );
 
     if (animatedElements.length === 0) return;
@@ -135,5 +136,14 @@ function initScrollAnimations() {
     animatedElements.forEach(el => {
         el.classList.add('animate-ready');
         observer.observe(el);
+    });
+}
+
+function initBackToTop() {
+    document.querySelectorAll('.back-to-top').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     });
 }
