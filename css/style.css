@@ -60,14 +60,18 @@ a:hover { color: var(--navy-dark); }
 }
 
 .logo {
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
     color: var(--navy);
-    text-transform: uppercase;
 }
 
 .logo:hover { color: var(--navy); }
+
+.logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+}
 
 .nav-menu {
     display: flex;
@@ -172,7 +176,7 @@ a:hover { color: var(--navy-dark); }
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 72% 35%;
+    object-position: 70% center;
 }
 
 .hero-overlay {
@@ -196,24 +200,32 @@ a:hover { color: var(--navy-dark); }
 }
 
 .hero-text {
-    max-width: 500px;
+    max-width: 540px;
 }
 
-.hero-text .hero-tagline {
-    font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+.hero-title {
+    font-size: clamp(1.85rem, 4vw, 2.6rem);
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 16px;
-    line-height: 1.25;
+    margin-bottom: 14px;
+    line-height: 1.2;
     letter-spacing: -0.02em;
 }
 
+.hero-tagline {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.45;
+}
+
 .hero-desc {
-    font-size: 1rem;
+    font-size: 0.98rem;
     color: var(--gray-text);
     margin-bottom: 32px;
     line-height: 1.6;
-    max-width: 460px;
+    max-width: 480px;
 }
 
 .hero-buttons {
@@ -266,10 +278,19 @@ a:hover { color: var(--navy-dark); }
     font-size: clamp(1.25rem, 2.5vw, 1.65rem);
     font-weight: 600;
     color: var(--navy);
-    margin-bottom: 48px;
-    max-width: 720px;
+    margin-bottom: 16px;
+    max-width: 780px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.section-intro {
+    text-align: center;
+    color: var(--gray-text);
+    max-width: 760px;
+    margin: 0 auto 48px;
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 .section-heading.left {
@@ -308,15 +329,25 @@ a:hover { color: var(--navy-dark); }
 
 .expertise-card h3 {
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--navy);
     margin-bottom: 8px;
+    white-space: nowrap;
 }
 
 .expertise-card p {
     font-size: 0.85rem;
+    font-weight: 700;
     color: var(--gray-text);
-    line-height: 1.5;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+    .expertise-card h3,
+    .expertise-card p {
+        white-space: normal;
+    }
 }
 
 /* ---- CONTACT BLOCK (főoldal + kapcsolat) ---- */
@@ -458,9 +489,101 @@ a:hover { color: var(--navy-dark); }
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
+.staff-photo {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--gray-bg);
+}
+
+.staff-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.staff-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
 .staff-body {
-    padding: 28px 20px;
+    padding: 20px 18px 24px;
     text-align: center;
+}
+
+.staff-note {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    margin-top: 8px;
+}
+
+/* ---- SERVICE CARDS (Szervíz) ---- */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    padding: 36px 32px;
+    transition: box-shadow var(--transition);
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 24px rgba(26, 77, 140, 0.08);
+}
+
+.service-card-icon {
+    color: var(--navy);
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.service-card h2 {
+    font-size: 1.35rem;
+    color: var(--navy);
+    margin-bottom: 14px;
+}
+
+.service-card > p {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    min-height: 4.8em;
+}
+
+.service-card-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-border);
+    font-size: 0.92rem;
+}
+
+.service-card-contact strong {
+    color: var(--navy);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.service-card-contact a {
+    color: var(--gray-text);
+}
+
+.service-card-contact a:hover {
+    color: var(--navy);
 }
 
 .staff-card h3 {
@@ -649,6 +772,7 @@ a:hover { color: var(--navy-dark); }
     }
 
     .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+    .service-cards { grid-template-columns: 1fr; }
     .contact-split { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .partners-grid { grid-template-columns: 1fr; }
