@@ -544,16 +544,19 @@ a:hover { color: var(--navy-dark); }
 }
 
 .staff-photo {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
-    background: var(--gray-bg);
+    background: #dce3eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .staff-photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
 }
 
 .staff-photo-placeholder {
@@ -675,8 +678,8 @@ a:hover { color: var(--navy-dark); }
 
 .staff-card h3 {
     font-size: 1rem;
-    font-weight: 600;
-    color: var(--text);
+    font-weight: 700;
+    color: var(--navy);
     margin-bottom: 4px;
 }
 
@@ -688,18 +691,20 @@ a:hover { color: var(--navy-dark); }
 }
 
 .staff-contact {
-    font-size: 0.82rem;
-    color: var(--gray-text);
+    font-size: 0.85rem;
+    color: var(--text);
 }
 
 .staff-contact a {
     display: block;
-    color: var(--gray-text);
+    color: var(--text);
     margin-top: 4px;
     word-break: break-all;
 }
 
-.staff-contact a:hover { color: var(--navy); }
+.staff-contact a:hover {
+    color: var(--navy);
+}
 
 /* ---- MAP ---- */
 .map-section { padding-bottom: 72px; }

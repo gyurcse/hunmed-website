@@ -119,7 +119,7 @@ function showNotification(message, type) {
 
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.partner-card, .staff-card, .service-card'
+        '.partner-card, .service-card'
     );
 
     if (animatedElements.length === 0) return;
