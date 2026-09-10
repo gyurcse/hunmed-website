@@ -368,15 +368,35 @@ a:hover { color: var(--navy-dark); }
 /* ---- CONTACT BLOCK (főoldal + kapcsolat) ---- */
 .contact-split {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 48px;
-    align-items: start;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.contact-info-panel,
+.form-panel {
+    background: var(--white);
+    border: 1px solid #d5dee8;
+    padding: 28px;
+    min-width: 0;
+}
+
+.contact-info-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--navy);
 }
 
 .contact-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .contact-list li {
@@ -392,6 +412,7 @@ a:hover { color: var(--navy-dark); }
     font-size: 1.1rem;
     margin-top: 3px;
     width: 20px;
+    flex-shrink: 0;
     text-align: center;
 }
 
@@ -402,13 +423,23 @@ a:hover { color: var(--navy-dark); }
 
 .contact-list a:hover { color: var(--navy); }
 
-.form-panel {
-    background: var(--white);
-    padding: 36px;
-    border: 1px solid var(--gray-border);
+.company-meta {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #e3e9f0;
+    background: transparent;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 0.9rem;
+    color: var(--gray-text);
 }
 
-.contact-form {
+.company-meta p + p { margin-top: 6px; }
+
+.form-panel .contact-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -677,15 +708,6 @@ a:hover { color: var(--navy-dark); }
     display: block;
     width: 100%;
     filter: grayscale(15%);
-}
-
-.company-meta {
-    margin-top: 32px;
-    padding: 24px;
-    background: var(--white);
-    border: 1px solid var(--gray-border);
-    font-size: 0.9rem;
-    color: var(--gray-text);
 }
 
 .company-meta p + p { margin-top: 6px; }
