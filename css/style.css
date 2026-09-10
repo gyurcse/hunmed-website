@@ -747,6 +747,7 @@ a:hover { color: var(--navy-dark); }
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1100px) {
     .expertise-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
     .staff-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-main { grid-template-columns: 1fr 1fr; }
 }
