@@ -68,7 +68,7 @@ a:hover { color: var(--navy-dark); }
 .logo:hover { color: var(--navy); }
 
 .logo-img {
-    height: 36px;
+    height: 42px;
     width: auto;
     display: block;
 }
