@@ -987,7 +987,9 @@ a:hover { color: var(--navy-dark); }
         box-sizing: border-box;
     }
 
-    .nav-menu.active { transform: translateX(0); }
+    .nav-menu.active {
+        transform: translateX(0) !important;
+    }
 
     .nav-menu > li {
         width: 100%;
