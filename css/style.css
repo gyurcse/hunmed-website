@@ -942,18 +942,23 @@ a:hover { color: var(--navy-dark); }
         margin-bottom: 24px;
     }
 
+    .hero {
+        min-height: min(72vh, 560px);
+    }
+
     .hero-overlay {
         background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.97) 0%,
-            rgba(255, 255, 255, 0.94) 55%,
-            rgba(255, 255, 255, 0.82) 100%
+            185deg,
+            rgba(255, 255, 255, 0.88) 0%,
+            rgba(255, 255, 255, 0.62) 42%,
+            rgba(232, 240, 250, 0.28) 72%,
+            rgba(232, 240, 250, 0.12) 100%
         );
     }
 
     .hero-media img {
-        object-position: 28% 28%;
-        opacity: 0.55;
+        object-position: 32% 35%;
+        opacity: 1;
         transform: scaleX(-1);
     }
 
