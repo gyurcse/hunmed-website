@@ -997,11 +997,6 @@ a:hover { color: var(--navy-dark); }
         gap: 12px;
     }
 
-    .service-block-review {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
     .service-block,
     .contact-info-panel,
     .form-panel { padding: 22px 18px; }
