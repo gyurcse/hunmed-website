@@ -635,7 +635,7 @@ a:hover { color: var(--navy-dark); }
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 24px 32px;
-    align-items: center;
+    align-items: start;
 }
 
 .service-card-head {
