@@ -632,10 +632,10 @@ a:hover { color: var(--navy-dark); }
 }
 
 .service-block-review {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 24px 32px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
 }
 
 .service-card-head {
@@ -737,7 +737,7 @@ a:hover { color: var(--navy-dark); }
     background: #f4f7fb;
     border: 1px solid #e3e9f0;
     font-size: 0.92rem;
-    min-width: min(280px, 100%);
+    max-width: 360px;
 }
 
 .service-card-contact strong {
