@@ -610,35 +610,47 @@ a:hover { color: var(--navy-dark); }
     background: #edf1f6;
 }
 
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    max-width: 880px;
+.service-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
-.service-card {
-    display: flex;
-    flex-direction: column;
+.service-block {
     background: var(--white);
     border: 1px solid #d5dee8;
     border-top: 3px solid var(--navy);
     padding: 28px 28px 26px;
-    min-height: 100%;
     transition: box-shadow var(--transition), border-color var(--transition);
 }
 
-.service-card:hover {
+.service-block:hover {
     box-shadow: 0 10px 28px rgba(26, 77, 140, 0.1);
     border-color: #b8c7d8;
 }
 
+.service-block-review {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 24px 32px;
+    align-items: center;
+}
+
 .service-card-head {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
+}
+
+.service-block > .service-card-head {
+    margin-bottom: 22px;
+}
+
+.service-block-review > .service-card-head {
+    margin-bottom: 0;
 }
 
 .service-card-icon {
@@ -653,29 +665,79 @@ a:hover { color: var(--navy-dark); }
     font-size: 1.15rem;
 }
 
-.service-card h2 {
+.service-block h2 {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--navy);
-    margin: 0;
+    margin: 0 0 8px;
     line-height: 1.2;
 }
 
-.service-card > p {
+.service-lead {
     color: var(--gray-text);
     font-size: 0.95rem;
     line-height: 1.65;
-    margin: 0 0 22px;
+    margin: 0;
+    max-width: 62ch;
+}
+
+.service-people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.service-person {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 16px;
+    background: #f4f7fb;
+    border: 1px solid #e3e9f0;
+}
+
+.service-person strong {
+    color: var(--navy);
+    font-size: 1rem;
+}
+
+.service-person-role {
+    font-size: 0.88rem;
+    color: var(--gray-text);
+    line-height: 1.45;
     flex: 1;
+}
+
+.service-person a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-text);
+    font-size: 0.86rem;
+    margin-top: 4px;
+    word-break: break-word;
+}
+
+.service-person a i {
+    width: 1em;
+    flex-shrink: 0;
+    color: var(--navy);
+    opacity: 0.75;
+}
+
+.service-person a:hover {
+    color: var(--navy);
 }
 
 .service-card-contact {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding-top: 18px;
-    border-top: 1px solid #e3e9f0;
+    padding: 18px 20px;
+    background: #f4f7fb;
+    border: 1px solid #e3e9f0;
     font-size: 0.92rem;
+    min-width: min(280px, 100%);
 }
 
 .service-card-contact strong {
@@ -698,56 +760,6 @@ a:hover { color: var(--navy-dark); }
 }
 
 .service-card-contact a:hover {
-    color: var(--navy);
-}
-
-.service-people {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: auto;
-    padding-top: 18px;
-    border-top: 1px solid #e3e9f0;
-}
-
-.service-person {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.service-person + .service-person {
-    padding-top: 14px;
-    border-top: 1px solid #eef2f6;
-}
-
-.service-person strong {
-    color: var(--navy);
-    font-size: 1rem;
-}
-
-.service-person-role {
-    font-size: 0.88rem;
-    color: var(--gray-text);
-    line-height: 1.45;
-}
-
-.service-person a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--gray-text);
-    font-size: 0.9rem;
-    margin-top: 2px;
-}
-
-.service-person a i {
-    width: 1em;
-    color: var(--navy);
-    opacity: 0.75;
-}
-
-.service-person a:hover {
     color: var(--navy);
 }
 
@@ -906,6 +918,7 @@ a:hover { color: var(--navy-dark); }
     .partners-grid { grid-template-columns: repeat(3, 1fr); }
     .staff-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-main { grid-template-columns: 1fr 1fr; }
+    .service-people-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -979,12 +992,17 @@ a:hover { color: var(--navy-dark); }
     .expertise-card h3,
     .expertise-card p { white-space: normal; }
 
-    .service-cards {
+    .service-people-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 12px;
     }
 
-    .service-card,
+    .service-block-review {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-block,
     .contact-info-panel,
     .form-panel { padding: 22px 18px; }
 
