@@ -611,14 +611,18 @@ a:hover { color: var(--navy-dark); }
 }
 
 .service-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    align-items: start;
     max-width: 960px;
     margin: 0 auto;
 }
 
 .service-block {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     background: var(--white);
     border: 1px solid #d5dee8;
     border-top: 3px solid var(--navy);
@@ -632,10 +636,7 @@ a:hover { color: var(--navy-dark); }
 }
 
 .service-block-review {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    align-items: stretch;
+    align-self: start;
 }
 
 .service-card-head {
@@ -646,10 +647,6 @@ a:hover { color: var(--navy-dark); }
 }
 
 .service-block > .service-card-head {
-    margin-bottom: 22px;
-}
-
-.service-block-review > .service-card-head {
     margin-bottom: 0;
 }
 
@@ -678,20 +675,19 @@ a:hover { color: var(--navy-dark); }
     font-size: 0.95rem;
     line-height: 1.65;
     margin: 0;
-    max-width: 62ch;
 }
 
 .service-people-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
 
 .service-person {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    padding: 18px 16px;
+    padding: 16px 16px;
     background: #f4f7fb;
     border: 1px solid #e3e9f0;
 }
@@ -705,7 +701,6 @@ a:hover { color: var(--navy-dark); }
     font-size: 0.88rem;
     color: var(--gray-text);
     line-height: 1.45;
-    flex: 1;
 }
 
 .service-person a {
@@ -733,11 +728,12 @@ a:hover { color: var(--navy-dark); }
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 18px 20px;
+    padding: 16px 16px;
     background: #f4f7fb;
     border: 1px solid #e3e9f0;
     font-size: 0.92rem;
-    max-width: 360px;
+    width: 100%;
+    max-width: none;
 }
 
 .service-card-contact strong {
@@ -918,7 +914,7 @@ a:hover { color: var(--navy-dark); }
     .partners-grid { grid-template-columns: repeat(3, 1fr); }
     .staff-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-main { grid-template-columns: 1fr 1fr; }
-    .service-people-grid { grid-template-columns: 1fr; }
+    .service-layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -992,9 +988,9 @@ a:hover { color: var(--navy-dark); }
     .expertise-card h3,
     .expertise-card p { white-space: normal; }
 
-    .service-people-grid {
+    .service-layout {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 16px;
     }
 
     .service-block,
