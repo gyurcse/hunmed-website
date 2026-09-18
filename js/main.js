@@ -16,17 +16,21 @@ function initMobileNav() {
 
     if (!navToggle || !navMenu) return;
 
+    function setNavOpen(open) {
+        navToggle.classList.toggle('active', open);
+        navMenu.classList.toggle('active', open);
+        document.body.classList.toggle('nav-open', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+        navToggle.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
+    }
+
     navToggle.addEventListener('click', function() {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.classList.toggle('nav-open');
+        setNavOpen(!navToggle.classList.contains('active'));
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.classList.remove('nav-open');
+            setNavOpen(false);
         });
     });
 }
@@ -119,7 +123,7 @@ function showNotification(message, type) {
 
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.partner-card, .service-card'
+        '.partner-card, .service-block'
     );
 
     if (animatedElements.length === 0) return;

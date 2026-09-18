@@ -54,6 +54,11 @@ a:hover { color: var(--navy-dark); }
     z-index: 1000;
     background: var(--white);
     border-bottom: 1px solid var(--gray-border);
+    transition: box-shadow var(--transition);
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 16px rgba(15, 52, 96, 0.08);
 }
 
 .nav {
@@ -183,7 +188,6 @@ a:hover { color: var(--navy-dark); }
     height: 100%;
     object-fit: cover;
     object-position: 30% center;
-    transform: scaleX(-1);
 }
 
 .hero-overlay {
@@ -959,7 +963,6 @@ a:hover { color: var(--navy-dark); }
     .hero-media img {
         object-position: 32% 35%;
         opacity: 1;
-        transform: scaleX(-1);
     }
 
     .hero-buttons {
